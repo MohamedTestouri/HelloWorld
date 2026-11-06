@@ -34,7 +34,7 @@
 | B1. Owner decides: auto-entrepreneur registration | **Completed — approved D1 2026-11-06** | Decision in control plane (`registration_auto_entrepreneur` → approved) | — |
 | B2. Registration package (forms, steps, checklist) prepared | **Completed** | `docs/offers/registration-package.md` | B1 |
 | B3. Payoneer account | Awaiting owner (KYC) — **D2 approved: Payoneer first** | Account active | Owner follows package in docs/offers |
-| B4. Accountant shortlist (3 Tunisian advisers, fee quotes) | Ready | Shortlist doc | — |
+| B4. Accountant shortlist (3 Tunisian advisers, fee quotes) | **Completed** | `docs/offers/accountant-shortlist.md` — CFRAUDIT/Luca Pacioli/CAMCONSULT; owner picks before any contact | — |
 | B5. Invoice + service agreement templates | **Completed (draft)** | `docs/offers/agreement-invoice-templates.md` — counsel review flagged before first use | — |
 
 ## Epic C — Control plane (Phase 2 MVP)
