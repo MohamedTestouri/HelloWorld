@@ -1,0 +1,10 @@
+.params {
+  margin: 0;
+  font-size: .72rem;
+  color: var(--muted);
+  white-space: pre-wrap;
+  word-break: break-all;
+  max-width: 280px;
+}
+.decisions { display: flex; gap: 6px; flex-wrap: wrap; }
+.decisions .button { padding: 4px 10px; font-size: .72rem; }

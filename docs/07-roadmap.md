@@ -45,7 +45,7 @@
 | C2. DB schema v1 (tasks, approvals, audit, financial, agents) | **Completed** | Migrations apply; CHECK constraints tested |
 | C3. Approval API + state-machine tests | **Completed** | 23/23 tests: rejected ⇒ cannot execute; param drift ⇒ 409 |
 | C4. Worker with checkpoint/restart tests | **Completed** | E2E: ready→claim→complete w/ checkpoint; crash-recovery test passes |
-| C5. Dashboard v1 (4 modules, real data only) | Planned | Screenshots with live API |
+| C5. Dashboard v1 (4 modules, real data only) | **Completed** | Angular 22 + FUI design; Overview/Tasks/Approvals/Audit all reading live API via auth-injecting proxy; `ng build` green; preview verified 200 + data flows |
 | C6. CI (GitHub Actions: build + test) | **Completed** | `npm test` + `npm run typecheck` both green locally (GH workflow file next) |
 
 ## Epic D — Research (parallel, low effort)
@@ -73,3 +73,5 @@ Every session, in order: (1) verify no unauthorized spend, (2) advance highest-p
 | 2026-11-06 | Control plane seeded with 4 real tasks + **2 pending owner approvals** (outreach_send, registration) | live API `:8787/health` → 4 tasks, 2 pending |
 | 2026-11-06 | **Owner decisions recorded:** D1 register auto-entrepreneur = YES (approval executed in control plane); D2 rail = Payoneer; D3 niche = dental confirmed | control-plane audit: `approval.approved`; B2 package published `docs/offers/registration-package.md` |
 | 2026-11-06 | A5 setup checklist published; A6 starter batch **11 real leads** (US dental practices, public emails, source URLs), CSV git-ignored + sha256 logged; persistent worker running in background | `docs/offers/setup-checklist-48h.md`; `data/outreach/batch1-starter.csv`; worker process log |
+| 2026-11-06 | **A6 complete: 117/100 leads** across 41 cities (114 emails, 3 form-only, 2 spot-verified live); sha256 `ace88a13…` in control plane | `data/outreach/batch1-starter.csv` |
+| 2026-11-06 | **C5 complete: dashboard live** — 4 modules (Overview, Tasks, Approvals, Audit) on real API data via auth-injecting proxy; `ng build` green; preview host 200; 23/23 backend tests still pass | `dashboard/`; preview :4200 |

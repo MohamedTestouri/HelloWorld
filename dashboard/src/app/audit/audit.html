@@ -1,0 +1,34 @@
+<section class="panel" aria-label="Audit feed">
+  <div class="toolbar">
+    <span class="label" style="margin:0">activity & audit — append-only</span>
+    <div class="filters" role="group" aria-label="Filter by outcome">
+      <button class="button button--ghost" [class.active]="outcomeFilter===''" (click)="setFilter('')">all</button>
+      <button class="button button--ghost" [class.active]="outcomeFilter==='ok'" (click)="setFilter('ok')">ok</button>
+      <button class="button button--ghost" [class.active]="outcomeFilter==='denied'" (click)="setFilter('denied')">denied</button>
+      <button class="button button--ghost" [class.active]="outcomeFilter==='error'" (click)="setFilter('error')">error</button>
+      <button class="button" (click)="reload()">refresh</button>
+    </div>
+  </div>
+
+  @if (error) { <p style="color:var(--danger)">{{ error }}</p> }
+
+  <table class="data">
+    <thead>
+      <tr><th>Time</th><th>Actor</th><th>Action</th><th>Entity</th><th>Outcome</th><th>Detail</th></tr>
+    </thead>
+    <tbody>
+      @for (e of visible; track e.id) {
+        <tr>
+          <td class="muted">{{ e.ts | date:'MM-dd HH:mm:ss' }}</td>
+          <td>{{ e.actor }}</td>
+          <td style="color:var(--cyan)">{{ e.action }}</td>
+          <td class="muted">{{ e.entity_type }}{{ e.entity_id ? ' · ' + e.entity_id.slice(0, 8) : '' }}</td>
+          <td><span [class]="outcomeClass(e.outcome)">{{ e.outcome }}</span></td>
+          <td class="muted detail">{{ e.error || e.safe_params }}</td>
+        </tr>
+      } @empty {
+        <tr><td colspan="6" class="muted">No events match.</td></tr>
+      }
+    </tbody>
+  </table>
+</section>

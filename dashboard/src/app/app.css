@@ -1,0 +1,35 @@
+.shell-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px 10px;
+}
+.shell-brand { display: flex; flex-direction: column; gap: 2px; }
+.shell-header nav { display: flex; gap: 6px; flex-wrap: wrap; }
+.shell-header nav a {
+  text-decoration: none;
+  color: var(--muted);
+  border: 1px solid transparent;
+  padding: 6px 14px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: .75rem;
+}
+.shell-header nav a:hover { color: var(--cyan); border-color: rgba(0, 255, 255, .3); }
+.shell-header nav a.active {
+  color: var(--cyan);
+  border-color: var(--cyan);
+  box-shadow: 0 0 10px rgba(0, 255, 255, .15);
+}
+.shell-header nav a:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+.shell-health { display: flex; align-items: center; gap: 6px; }
+.shell-main { padding: 20px 24px 40px; max-width: 1200px; margin: 0 auto; }
+.shell-footer {
+  text-align: center;
+  padding: 18px;
+  font-size: .72rem;
+  letter-spacing: .06em;
+  border-top: 1px solid rgba(0, 255, 255, .15);
+}

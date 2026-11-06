@@ -1,0 +1,42 @@
+<section class="panel" aria-label="Approval center">
+  <span class="label">approval center — parameter-bound authorizations</span>
+  @if (error) { <p style="color:var(--danger)">{{ error }}</p> }
+
+  <p class="muted">
+    Every spend, send, registration, or public commitment requires an owner decision here.
+    Approved = exact parameters only. Rejected/expired = terminal, execution impossible.
+  </p>
+
+  <table class="data">
+    <thead>
+      <tr><th>Action</th><th>Parameters</th><th>Cost</th><th>Status</th><th>Expires</th><th>Decision</th></tr>
+    </thead>
+    <tbody>
+      @for (a of approvals; track a.id) {
+        <tr>
+          <td>
+            <strong style="color:var(--cyan)">{{ a.action_type }}</strong>
+            <div class="muted">{{ a.rationale }}</div>
+            @if (a.risks) { <div class="muted">⚠ {{ a.risks }}</div> }
+          </td>
+          <td><pre class="params">{{ pretty(a.exact_parameters) }}</pre></td>
+          <td>{{ a.cost }}</td>
+          <td><span [class]="statusClass(a.status)">{{ a.status }}</span></td>
+          <td class="muted">{{ a.expires_at | date:'MM-dd HH:mm' }}</td>
+          <td>
+            @if (a.status === 'pending') {
+              <div class="decisions">
+                <button class="button" [disabled]="busy===a.id" (click)="decide(a,'approved')">approve</button>
+                <button class="button button--danger" [disabled]="busy===a.id" (click)="decide(a,'rejected')">reject</button>
+              </div>
+            } @else {
+              <span class="muted">{{ a.decided_at ? (a.decided_at | date:'MM-dd HH:mm') : '—' }}</span>
+            }
+          </td>
+        </tr>
+      } @empty {
+        <tr><td colspan="6" class="muted">No approvals recorded.</td></tr>
+      }
+    </tbody>
+  </table>
+</section>

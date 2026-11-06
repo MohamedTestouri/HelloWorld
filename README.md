@@ -9,11 +9,11 @@ Autonomous, self-funded international business ecosystem — owned and operated 
 | Phase | Status |
 |---|---|
 | Phase 1 — Capability assessment & business discovery | **Completed 2026-11-06** |
-| Phase 2 — Minimum viable control plane | **Core complete 2026-11-06** (API + approvals + worker + tests; dashboard pending) |
-| Phase 3 — Market validation | In progress (niche selected: dental — see docs/08) |
+| Phase 2 — Minimum viable control plane | **Completed 2026-11-06** (API + approvals + worker + dashboard + tests) |
+| Phase 3 — Market validation | In progress — niche dental; offer/copy/list ready (117 leads); **outreach send awaiting owner approval** |
 | Phase 4 — Revenue generation | Not started ($0 revenue) |
 
-**Verified:** 23/23 automated tests pass (`npm test`), typecheck clean. Control-plane API + persistent worker run locally with zero external services.
+**Verified:** 23/23 automated tests pass (`npm test`), typecheck clean, `ng build` green. Control-plane API, persistent worker, and dashboard all run locally with zero external services. Dashboard: `npm run api` + `ng serve` (see `dashboard/proxy.conf.js` — auth injected server-side, browser never sees credentials).
 
 No revenue has been generated. No money has been spent. No accounts have been created. All figures in `docs/` are research estimates, clearly marked.
 

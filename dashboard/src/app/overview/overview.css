@@ -1,0 +1,7 @@
+.pending-list { list-style: none; padding: 0; margin: 0; }
+.pending-list li {
+  display: flex; flex-direction: column; gap: 2px;
+  padding: 10px 0; border-bottom: 1px solid rgba(0,255,255,.1);
+}
+.pending-list strong { color: var(--cyan); letter-spacing: .06em; }
+.alert { color: var(--warn); }

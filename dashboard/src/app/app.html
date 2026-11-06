@@ -1,0 +1,29 @@
+<header class="shell-header">
+  <div class="shell-brand">
+    <span class="label" style="margin:0">◈ jarvis // command center</span>
+    <span class="muted">control plane v0.1 — independent of any AI session</span>
+  </div>
+  <nav aria-label="Primary">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Overview</a>
+    <a routerLink="/tasks" routerLinkActive="active">Tasks</a>
+    <a routerLink="/approvals" routerLinkActive="active">Approvals</a>
+    <a routerLink="/audit" routerLinkActive="active">Audit</a>
+  </nav>
+  <div class="shell-health" aria-live="polite">
+    @if (health) {
+      <span class="status-dot"></span><span class="muted">API OK · {{ health.pending_approvals }} pending</span>
+    } @else {
+      <span class="status-dot status-dot--bad"></span><span class="muted">API OFFLINE</span>
+    }
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true"><span class="ticker__inner">{{ tickerText }}</span></div>
+
+<main class="shell-main">
+  <router-outlet />
+</main>
+
+<footer class="shell-footer muted">
+  All figures from live control-plane records — no mock data · Owner decisions execute only through the approval API
+</footer>

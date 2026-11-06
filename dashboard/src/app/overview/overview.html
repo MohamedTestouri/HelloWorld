@@ -1,0 +1,59 @@
+<section class="grid-kpi" aria-label="Key metrics">
+  <div class="panel">
+    <span class="label">revenue received</span>
+    <div class="readout">${{ revenueReceived.toFixed(2) }}</div>
+    <div class="muted">target: $5,000/mo personal net · {{ targetProgress }}%</div>
+  </div>
+  <div class="panel">
+    <span class="label">tasks tracked</span>
+    <div class="readout">{{ tasks.length }}</div>
+    <div class="muted">{{ statusSummary || 'no tasks yet' }}</div>
+  </div>
+  <div class="panel">
+    <span class="label">approvals pending</span>
+    <div class="readout" [class.alert]="pendingApprovals.length > 0">{{ pendingApprovals.length }}</div>
+    <div class="muted">owner decisions required before execution</div>
+  </div>
+  <div class="panel">
+    <span class="label">system</span>
+    <div class="readout" style="font-size:1.1rem">
+      <span class="status-dot" [class.status-dot--bad]="!health"></span>
+      {{ health ? 'operational' : 'offline' }}
+    </div>
+    <div class="muted">db {{ health?.db ?? '—' }} · last check {{ (health?.time | date:'HH:mm:ss') ?? '—' }}</div>
+  </div>
+</section>
+
+@if (error) {
+  <p class="panel" style="margin-top:16px; border-color: var(--danger)">API error: {{ error }}</p>
+}
+
+<section class="panel" style="margin-top:16px" aria-label="Pending approvals">
+  <span class="label">awaiting your decision</span>
+  @if (pendingApprovals.length === 0) {
+    <p class="muted">No pending approvals. Nothing will be spent or sent without one.</p>
+  } @else {
+    <ul class="pending-list">
+      @for (a of pendingApprovals; track a.id) {
+        <li>
+          <strong>{{ a.action_type }}</strong>
+          <span class="muted">cost {{ a.cost }} · expires {{ a.expires_at | date:'medium' }}</span>
+          <span class="muted">{{ a.rationale }}</span>
+        </li>
+      }
+    </ul>
+  }
+</section>
+
+<section class="panel" style="margin-top:16px" aria-label="Milestones">
+  <span class="label">milestone tracker (verified only)</span>
+  <table class="data">
+    <thead><tr><th>Milestone</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>First paying customer</td><td><span class="tag tag--blocked">not reached</span></td></tr>
+      <tr><td>First $100 revenue</td><td><span class="tag tag--blocked">not reached</span></td></tr>
+      <tr><td>First $1,000/mo revenue</td><td><span class="tag tag--blocked">not reached</span></td></tr>
+      <tr><td>$5,000/mo personal net</td><td><span class="tag tag--blocked">not reached</span></td></tr>
+    </tbody>
+  </table>
+</section>

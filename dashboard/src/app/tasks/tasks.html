@@ -1,0 +1,48 @@
+<section class="panel" aria-label="Task board">
+  <div class="toolbar">
+    <span class="label" style="margin:0">task board — persistent work items</span>
+    <div class="filters" role="group" aria-label="Filter by status">
+      <button class="button button--ghost" (click)="setFilter('')" [class.active]="filter===''">all</button>
+      @for (s of ['ready','in_progress','blocked','completed']; track s) {
+        <button class="button button--ghost" (click)="setFilter(s)" [class.active]="filter===s">{{ s }}</button>
+      }
+      <button class="button" (click)="reload()">refresh</button>
+    </div>
+  </div>
+
+  @if (error) { <p style="color:var(--danger)">{{ error }}</p> }
+
+  <table class="data">
+    <thead>
+      <tr><th>Priority</th><th>Task</th><th>Status</th><th>Attempts</th><th>Updated</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+      @for (t of visible; track t.id) {
+        <tr>
+          <td>P{{ t.priority }}</td>
+          <td>
+            {{ t.title }}
+            @if (parsePayload(t).note) { <div class="muted">{{ parsePayload(t).note }}</div> }
+          </td>
+          <td><span [class]="statusClass(t.status)">{{ t.status }}</span></td>
+          <td>{{ t.attempts }}/{{ t.max_attempts }}</td>
+          <td class="muted">{{ t.updated_at | date:'MM-dd HH:mm' }}</td>
+          <td>
+            @if (t.status === 'planned' || t.status === 'ready') {
+              <button class="button" (click)="advance(t)">
+                {{ t.status === 'planned' ? '→ ready' : '→ run' }}
+              </button>
+            } @else {
+              <span class="muted">—</span>
+            }
+          </td>
+        </tr>
+      } @empty {
+        <tr><td colspan="6" class="muted">No tasks match.</td></tr>
+      }
+    </tbody>
+  </table>
+  <p class="muted" style="margin-top:10px">
+    Tasks persist in the control-plane database — they survive session end and worker restarts.
+  </p>
+</section>
