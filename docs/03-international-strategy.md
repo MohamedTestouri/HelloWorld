@@ -64,12 +64,14 @@ Illustrative only — **assumptions, not advice**; assumes Tunisian tax-resident
 
 **Prepared while waiting:** invoice templates (EUR/USD), service agreement template, pricing sheet. Owner involvement required: choose rail, complete KYC.
 
-## 5. Global mobility / Grenada CBI — research status
+## 5. Global mobility / Grenada CBI — research status (D2 update 2026-11-06)
 
-- Program: Grenada CBI Act 2013; routes = NTF contribution or approved real estate [V] [12].
-- **Cost figures conflict across sources** ($150K official snippet vs $200K vs $235K NTF; $220K vs $270K real estate) [V/V/V] [12][13][11][14]. Official Grenada Schedule of Fees must be re-verified directly (site access blocked in this sandbox — owner or later session with broader access).
-- Caribbean CBI programs aligned on unified rules (July 2025) [V] [15].
-- **Financial control:** no application, no transfer, no agent contact without explicit owner approval AND verified business funds far exceeding the investment — currently: **$0 → no action**.
+- Program: Grenada CBI Act 2013 (Act No. 15 of 2013); routes = NTF contribution or approved real estate [V] [12]. Applications **only** via Authorised International Marketing Agent → Authorised Local Agent; no direct submission to CBIC; no mandatory interview; processing 3–4 months per official site [V] [16].
+- **Official Schedule of Fees (cbi.gov.gd, accessed 2026-11-06) [V] [16]:**
+  - NTF: individual **USD 150,000** · applicant+spouse **USD 200,000** · family of four **USD 200,000** · larger families 200,000 + 25,000 per additional dependant after the third.
+  - Real-estate route: official page lists per-applicant tiers (figures beyond the NTF block not fully captured).
+- **Conflict remains:** commercial 2025–26 guides claim unified-rule increases to **USD 235,000 NTF / 270,000 real estate** [V] [13][15]. Either the official page is stale or the guides overstate. **Resolution rule: confirm current figures directly with an Authorised Agent at application time — not before, and not via this research.**
+- **Financial control:** no application, no transfer, no agent contact without explicit owner approval AND verified business funds far exceeding the investment — currently: **$0 → no action**. Deferral unchanged.
 - Alternatives to research in Phase 5: Portugal/Spain residence pathways, UAE residence, Panama/Paraguay options — later.
 
 ## 6. Decisions required from owner
@@ -99,3 +101,4 @@ Illustrative only — **assumptions, not advice**; assumes Tunisian tax-resident
 - [13](https://www.flyingcolourimmigration.com/blog/grenada-citizenship-by-investment-program/) — $235K/$270K figures
 - [14](https://armenian-lawyer.com/immigration/grenada-citizenship-by-investment-in-2025-terms-costs-and-returns/) — $200K NTF citing official schedule
 - [15](https://passportivity.com/citizenship-by-investment/grenada/) — July 2025 unified Caribbean rules
+- [16](https://cbi.gov.gd/index.php/schedule-of-fees) — **official Grenada Schedule of Fees** (accessed 2026-11-06); legislation & process: cbi.gov.gd
