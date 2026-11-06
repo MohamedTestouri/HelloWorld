@@ -22,7 +22,7 @@
 | A3. Draft productized offer + pricing | **Completed (draft)** | `docs/offers/dental-answering-engine.md` — prices marked [H], not published | A2 |
 | A4. Landing page — **draft done**, deployment awaiting approval | Draft ready | `landing/index.html` (local only) | A3 |
 | A5. 3 demo artifacts (synthetic data) | Planned | Screenshots/docs in repo | A3 |
-| A6. Outreach list (100 leads, verified sources) | Planned | CSV in secure location, **not** in Git | A2 |
+| A6. Outreach list (100 leads, verified sources) | **In progress — 11/100** | Starter batch sourced from practice websites (public business emails); CSV in `data/outreach/` (git-ignored), sha256 in control plane | A2 |
 | A7. Outreach copy | Awaiting approval | Owner signs off | A3, A6 |
 | A8. Campaign #1 execution | Awaiting approval | ≥100 sends, tracked | A7 |
 | A9. Day-30 gate review | Planned | ≥5 positive replies OR ≥1 paid pilot; else re-niche | A8 |
@@ -72,3 +72,4 @@ Every session, in order: (1) verify no unauthorized spend, (2) advance highest-p
 | 2026-11-06 | A3 offer draft, A4 landing draft, A6 methodology, A7 copy draft, B5 agreement+invoice templates | `docs/offers/*`, `landing/index.html` |
 | 2026-11-06 | Control plane seeded with 4 real tasks + **2 pending owner approvals** (outreach_send, registration) | live API `:8787/health` → 4 tasks, 2 pending |
 | 2026-11-06 | **Owner decisions recorded:** D1 register auto-entrepreneur = YES (approval executed in control plane); D2 rail = Payoneer; D3 niche = dental confirmed | control-plane audit: `approval.approved`; B2 package published `docs/offers/registration-package.md` |
+| 2026-11-06 | A5 setup checklist published; A6 starter batch **11 real leads** (US dental practices, public emails, source URLs), CSV git-ignored + sha256 logged; persistent worker running in background | `docs/offers/setup-checklist-48h.md`; `data/outreach/batch1-starter.csv`; worker process log |
