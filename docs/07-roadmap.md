@@ -18,7 +18,7 @@
 | Task | Status | Success criteria | Depends on |
 |---|---|---|---|
 | A1. Mine 50+ competitor reviews/complaints in 2 candidate niches | **Completed** | ≥20 datapoints → 8 themes, 3 niches (`docs/08`) | — |
-| A2. Pick ONE niche (data-driven from A1) | **Completed** | dental primary, home-services fallback (`docs/08` §3) | A1 |
+| A2. Pick ONE niche (data-driven from A1) | **Completed** | dental primary, home-services fallback (`docs/08` §3); **owner confirmed D3 2026-11-06** | A1 |
 | A3. Draft productized offer + pricing | **Completed (draft)** | `docs/offers/dental-answering-engine.md` — prices marked [H], not published | A2 |
 | A4. Landing page — **draft done**, deployment awaiting approval | Draft ready | `landing/index.html` (local only) | A3 |
 | A5. 3 demo artifacts (synthetic data) | Planned | Screenshots/docs in repo | A3 |
@@ -31,9 +31,9 @@
 
 | Task | Status | Success criteria | Depends on |
 |---|---|---|---|
-| B1. Owner decides: auto-entrepreneur registration | **Awaiting approval (D1)** | Owner confirmation | — |
-| B2. Registration package (forms, steps, checklist) prepared | Ready | Complete checklist in repo | B1 |
-| B3. Payoneer account | **Awaiting owner (KYC)** | Account active | Owner |
+| B1. Owner decides: auto-entrepreneur registration | **Completed — approved D1 2026-11-06** | Decision in control plane (`registration_auto_entrepreneur` → approved) | — |
+| B2. Registration package (forms, steps, checklist) prepared | **Completed** | `docs/offers/registration-package.md` | B1 |
+| B3. Payoneer account | Awaiting owner (KYC) — **D2 approved: Payoneer first** | Account active | Owner follows package in docs/offers |
 | B4. Accountant shortlist (3 Tunisian advisers, fee quotes) | Ready | Shortlist doc | — |
 | B5. Invoice + service agreement templates | **Completed (draft)** | `docs/offers/agreement-invoice-templates.md` — counsel review flagged before first use | — |
 
@@ -71,3 +71,4 @@ Every session, in order: (1) verify no unauthorized spend, (2) advance highest-p
 | 2026-11-06 | Stack deviation recorded (Node/SQLite instead of ASP.NET/Postgres — no .NET/Docker in sandbox) | `docs/04` §1.1 |
 | 2026-11-06 | A3 offer draft, A4 landing draft, A6 methodology, A7 copy draft, B5 agreement+invoice templates | `docs/offers/*`, `landing/index.html` |
 | 2026-11-06 | Control plane seeded with 4 real tasks + **2 pending owner approvals** (outreach_send, registration) | live API `:8787/health` → 4 tasks, 2 pending |
+| 2026-11-06 | **Owner decisions recorded:** D1 register auto-entrepreneur = YES (approval executed in control plane); D2 rail = Payoneer; D3 niche = dental confirmed | control-plane audit: `approval.approved`; B2 package published `docs/offers/registration-package.md` |
