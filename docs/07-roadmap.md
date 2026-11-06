@@ -20,11 +20,11 @@
 | A1. Mine 50+ competitor reviews/complaints in 2 candidate niches | **Completed** | ≥20 datapoints → 8 themes, 3 niches (`docs/08`) | — |
 | A2. Pick ONE niche (data-driven from A1) | **Completed** | dental primary, home-services fallback (`docs/08` §3); **owner confirmed D3 2026-11-06** | A1 |
 | A3. Draft productized offer + pricing | **Completed (draft)** | `docs/offers/dental-answering-engine.md` — prices marked [H], not published | A2 |
-| A4. Landing page — **draft done**, deployment awaiting approval | Draft ready | `landing/index.html` (local only) | A3 |
+| A4. Landing page — **deploy approved; gh-pages pushed with index.html at root** | Deployment approved (owner 2026-11-06); branch `gh-pages` @ `b7cfa72` ready; GitHub Pages API 403 (token lacks pages scope) → owner must flip Settings → Pages → Source: `gh-pages` / root | `landing/index.html`, `gh-pages` branch | A3 |
 | A5. 3 demo artifacts (synthetic data) | **Completed (audio blocked)** | transcript + weekly report + 48h checklist; TTS audition failed ×4 → audio documented blocked, nothing faked | A3 |
 | A6. Outreach list (100 leads, verified sources) | **Completed — 117/100** | 41 cities, 114 public emails + 3 contact-form-only, 2 spot-verified live; CSV git-ignored, sha256 `ace88a13…` in control plane | A2 |
 | A7. Outreach copy | **Ready for sign-off** | `docs/offers/outreach-campaign-1.md` drafted; list finalized (117 rows, sha in approval) | A3, A6 |
-| A8. Campaign #1 execution | Awaiting approval | ≥100 sends, tracked | A7 |
+| A8. Campaign #1 execution | **Started — 5 drafts staged, sends HELD** | Approval `9085ff31…` approved → executed (`campaign1-batchA-started-2026-11-06`); wave A: 5 Tier A Gmail drafts w/ true per-site personalization (ids in `docs/offers/outreach-execution-log.md`); **0 sent** — held for owner postal address (CAN-SPAM footer); suppression list created; sent-as verified | A7 |
 | A9. Day-30 gate review | Planned | ≥5 positive replies OR ≥1 paid pilot; else re-niche | A8 |
 
 ## Epic B — Legal & financial base
@@ -75,3 +75,4 @@ Every session, in order: (1) verify no unauthorized spend, (2) advance highest-p
 | 2026-11-06 | A5 setup checklist published; A6 starter batch **11 real leads** (US dental practices, public emails, source URLs), CSV git-ignored + sha256 logged; persistent worker running in background | `docs/offers/setup-checklist-48h.md`; `data/outreach/batch1-starter.csv`; worker process log |
 | 2026-11-06 | **A6 complete: 117/100 leads** across 41 cities (114 emails, 3 form-only, 2 spot-verified live); sha256 `ace88a13…` in control plane | `data/outreach/batch1-starter.csv` |
 | 2026-11-06 | **C5 complete: dashboard live** — 4 modules (Overview, Tasks, Approvals, Audit) on real API data via auth-injecting proxy; `ng build` green; preview host 200; 23/23 backend tests still pass | `dashboard/`; preview :4200 |
+| 2026-11-06 | **Campaign #1 approved & executed into staging**: approval `9085ff31…` approved (owner) → executed `campaign1-batchA-started-2026-11-06`; 5 Tier A Gmail drafts staged with true per-site observations (0 sent — held for CAN-SPAM postal address); `gh-pages` branch published (`b7cfa72`, index.html at root) — owner to enable Pages in repo Settings (API 403); suppression list created | `docs/offers/outreach-execution-log.md`; Gmail drafts; `gh-pages` |
