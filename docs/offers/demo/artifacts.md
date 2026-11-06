@@ -61,5 +61,5 @@ Action items:  update Saturday hours (client), add parking FAQ
 
 ## Still needed before campaign send
 
-- [ ] **Demo call audio** — decision: (a) AI-synthesized two-voice recording (free, immediate), or (b) real telephony test after first infrastructure spend approval. Recommend (a) for batch 1, labeled "synthetic demo".
-- [ ] Landing page deployment approval (public deployment = approval-gated).
+- [ ] **Demo call audio** — **BLOCKED (2026-11-06):** text-to-speech voice audition failed for every candidate (4 attempts, both `en` and `en-US`). No audio generated; nothing fabricated. Transcript asset above stands as the demo. Retry in a later session or record a real call after first telephony spend approval (decision (b)).
+- [x] All other A5 assets complete (transcript, weekly report sample, 48h checklist).
