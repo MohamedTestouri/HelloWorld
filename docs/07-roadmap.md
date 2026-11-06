@@ -1,0 +1,68 @@
+# 07 — Execution Roadmap
+
+*Phase 1 deliverable. Compiled 2026-11-06. Status vocabulary: Planned / Ready / In progress / Awaiting approval / Blocked / Completed / Failed / Cancelled.*
+
+## Priority order (revenue-first rule)
+
+```
+1. [Ready]      Payment rail + legal base (owner KYC steps — prepared, needs owner)
+2. [Ready]      Niche selection + competitor-review mining (autonomous)
+3. [Planned]    Productized offer + landing page + demo assets (autonomous, free tiers)
+4. [Awaiting]   Outreach campaign #1 — needs owner approval of list+copy
+5. [Ready]      Phase 2 control-plane MVP build (autonomous, local)
+6. [Planned]    First paid pilot → record in ledger (Phase 3→4 gate)
+```
+
+## Epic A — Market validation (opportunity #1, from 02)
+
+| Task | Status | Success criteria | Depends on |
+|---|---|---|---|
+| A1. Mine 50+ competitor reviews/complaints in 2 candidate niches | Ready | Complaint themes doc with citations | — |
+| A2. Pick ONE niche (data-driven from A1) | Planned | Decision recorded w/ evidence | A1 |
+| A3. Draft productized offer + pricing | Planned | Offer one-pager | A2 |
+| A4. Landing page (free subdomain) live | Planned | Working URL | A3 |
+| A5. 3 demo artifacts (synthetic data) | Planned | Screenshots/docs in repo | A3 |
+| A6. Outreach list (100 leads, verified sources) | Planned | CSV in secure location, **not** in Git | A2 |
+| A7. Outreach copy | Awaiting approval | Owner signs off | A3, A6 |
+| A8. Campaign #1 execution | Awaiting approval | ≥100 sends, tracked | A7 |
+| A9. Day-30 gate review | Planned | ≥5 positive replies OR ≥1 paid pilot; else re-niche | A8 |
+
+## Epic B — Legal & financial base
+
+| Task | Status | Success criteria | Depends on |
+|---|---|---|---|
+| B1. Owner decides: auto-entrepreneur registration | **Awaiting approval (D1)** | Owner confirmation | — |
+| B2. Registration package (forms, steps, checklist) prepared | Ready | Complete checklist in repo | B1 |
+| B3. Payoneer account | **Awaiting owner (KYC)** | Account active | Owner |
+| B4. Accountant shortlist (3 Tunisian advisers, fee quotes) | Ready | Shortlist doc | — |
+| B5. Invoice + service agreement templates | Ready | Templates in repo | — |
+
+## Epic C — Control plane (Phase 2 MVP)
+
+| Task | Status | Success criteria |
+|---|---|---|
+| C1. Solution skeleton + docker-compose + health endpoint | Ready | `docker compose up` green |
+| C2. DB schema v1 (tasks, approvals, audit, financial, agents) | Planned | Migrations apply clean |
+| C3. Approval API + state-machine tests | Planned | Tests: rejected ⇒ cannot execute |
+| C4. Worker with checkpoint/restart tests | Planned | Kill worker mid-task → recovers |
+| C5. Dashboard v1 (4 modules, real data only) | Planned | Screenshots with live API |
+| C6. CI (GitHub Actions: build + test) | Planned | Green badge |
+
+## Epic D — Research (parallel, low effort)
+
+| Task | Status | Notes |
+|---|---|---|
+| D1. Verify 2026 Tunisian FX code details (bank/DGI) | Blocked (external) | Owner can ask bank; agent re-verifies when access allows |
+| D2. Grenada official Schedule of Fees re-verify | Blocked (site access) | Research-only, no action |
+| D3. UK Ltd vs SARL cost model (when $3K/mo) | Planned | Triggers at revenue gate |
+| D4. Claude subscription pricing verification | Blocked (no anthropic.com access) | Purchase would need approval + revenue anyway |
+
+## Weekly cadence (from master prompt §66–67)
+
+Every session, in order: (1) verify no unauthorized spend, (2) advance highest-priority Ready task, (3) log evidence in this file, (4) re-rank. Weekly report template: revenue/cash/customers/pipeline/projects/risks/pending approvals — **filled only with real data**.
+
+## Session log
+
+| Date | Action | Evidence |
+|---|---|---|
+| 2026-11-06 | Phase 1 complete: capability assessment, 5-opportunity scoring, intl/tax research, architecture, financials, risk register, this roadmap | `docs/01`–`07` committed |
