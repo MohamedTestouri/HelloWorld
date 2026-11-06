@@ -6,6 +6,21 @@
 
 The dashboard/control plane is a **separate persistent system**. AI sessions (Claude or otherwise) are interchangeable clients that read and write business state through the control plane. When a session ends, nothing is lost.
 
+## 1.1 Stack deviation (recorded 2026-11-06, justified by environment)
+
+The master prompt recommends ASP.NET Core + PostgreSQL + Docker. **This sandbox has no .NET SDK, no Docker, and no root access** (verified: `dotnet` absent, `apt-get` permission-denied). Available: Node.js 22 (with built-in `node:sqlite`), Python 3.11, npm registry.
+
+**MVP implementation deviation:**
+
+| Planned | MVP actual | Migration path |
+|---|---|---|
+| ASP.NET Core | Node.js 22 + TypeScript (zero runtime deps beyond tsx) | Domain logic (approval machine, store) is pure TS — portable to C# if production later demands it |
+| PostgreSQL | SQLite (`node:sqlite`, WAL mode) — schema written with CHECK constraints & FKs that map 1:1 to Postgres | `schema.ts` DDL is the migration source; swap driver at Phase 4 |
+| Docker compose | Plain processes (`npm run api` / `npm run worker`) | Dockerize when deploying beyond sandbox |
+| RabbitMQ | DB-backed queue (tasks table with status polling) | Add outbox at Phase 4 when volume justifies |
+
+**Cost implication:** $0 additional, all free/open. **Risk:** SQLite single-writer — fine for single-owner MVP; revisit at >1 writer or multi-host. This deviation follows the master prompt's own rule: *choose the simplest architecture that satisfies current requirements; explain deviations.*
+
 ## 2. Target stack (owner-skill aligned, per master prompt)
 
 | Layer | Technology | Rationale |

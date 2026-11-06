@@ -1,0 +1,27 @@
+# Secrets & local state — never commit
+.env
+.env.*
+*.env
+credentials*
+secrets*
+*.pem
+*.key
+
+# Runtime data
+data/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Dependencies & build
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store

@@ -9,9 +9,11 @@ Autonomous, self-funded international business ecosystem — owned and operated 
 | Phase | Status |
 |---|---|
 | Phase 1 — Capability assessment & business discovery | **Completed 2026-11-06** |
-| Phase 2 — Minimum viable control plane | Not started |
-| Phase 3 — Market validation | Not started |
-| Phase 4 — Revenue generation | Not started |
+| Phase 2 — Minimum viable control plane | **Core complete 2026-11-06** (API + approvals + worker + tests; dashboard pending) |
+| Phase 3 — Market validation | In progress (niche selected: dental — see docs/08) |
+| Phase 4 — Revenue generation | Not started ($0 revenue) |
+
+**Verified:** 23/23 automated tests pass (`npm test`), typecheck clean. Control-plane API + persistent worker run locally with zero external services.
 
 No revenue has been generated. No money has been spent. No accounts have been created. All figures in `docs/` are research estimates, clearly marked.
 
@@ -26,6 +28,7 @@ No revenue has been generated. No money has been spent. No accounts have been cr
 | [docs/05-financial-assumptions.md](docs/05-financial-assumptions.md) | Unit economics and path to $5k/mo |
 | [docs/06-risk-register.md](docs/06-risk-register.md) | Risks, severity, mitigations |
 | [docs/07-roadmap.md](docs/07-roadmap.md) | Prioritized execution roadmap |
+| [docs/08-niche-selection.md](docs/08-niche-selection.md) | Competitor complaint mining & niche decision |
 
 ## Operating principles
 

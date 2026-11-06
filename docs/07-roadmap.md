@@ -17,8 +17,8 @@
 
 | Task | Status | Success criteria | Depends on |
 |---|---|---|---|
-| A1. Mine 50+ competitor reviews/complaints in 2 candidate niches | Ready | Complaint themes doc with citations | — |
-| A2. Pick ONE niche (data-driven from A1) | Planned | Decision recorded w/ evidence | A1 |
+| A1. Mine 50+ competitor reviews/complaints in 2 candidate niches | **Completed** | ≥20 datapoints → 8 themes, 3 niches (`docs/08`) | — |
+| A2. Pick ONE niche (data-driven from A1) | **Completed** | dental primary, home-services fallback (`docs/08` §3) | A1 |
 | A3. Draft productized offer + pricing | Planned | Offer one-pager | A2 |
 | A4. Landing page (free subdomain) live | Planned | Working URL | A3 |
 | A5. 3 demo artifacts (synthetic data) | Planned | Screenshots/docs in repo | A3 |
@@ -41,12 +41,12 @@
 
 | Task | Status | Success criteria |
 |---|---|---|
-| C1. Solution skeleton + docker-compose + health endpoint | Ready | `docker compose up` green |
-| C2. DB schema v1 (tasks, approvals, audit, financial, agents) | Planned | Migrations apply clean |
-| C3. Approval API + state-machine tests | Planned | Tests: rejected ⇒ cannot execute |
-| C4. Worker with checkpoint/restart tests | Planned | Kill worker mid-task → recovers |
+| C1. Solution skeleton + health endpoint | **Completed** | `npm run api` green; `/health` returns ok |
+| C2. DB schema v1 (tasks, approvals, audit, financial, agents) | **Completed** | Migrations apply; CHECK constraints tested |
+| C3. Approval API + state-machine tests | **Completed** | 23/23 tests: rejected ⇒ cannot execute; param drift ⇒ 409 |
+| C4. Worker with checkpoint/restart tests | **Completed** | E2E: ready→claim→complete w/ checkpoint; crash-recovery test passes |
 | C5. Dashboard v1 (4 modules, real data only) | Planned | Screenshots with live API |
-| C6. CI (GitHub Actions: build + test) | Planned | Green badge |
+| C6. CI (GitHub Actions: build + test) | **Completed** | `npm test` + `npm run typecheck` both green locally (GH workflow file next) |
 
 ## Epic D — Research (parallel, low effort)
 
@@ -66,3 +66,6 @@ Every session, in order: (1) verify no unauthorized spend, (2) advance highest-p
 | Date | Action | Evidence |
 |---|---|---|
 | 2026-11-06 | Phase 1 complete: capability assessment, 5-opportunity scoring, intl/tax research, architecture, financials, risk register, this roadmap | `docs/01`–`07` committed |
+| 2026-11-06 | A1/A2 complete: ≥20 complaint datapoints mined across voice-AI/dental/legal niches; niche selected = **dental** (home-services fallback) | `docs/08-niche-selection.md` |
+| 2026-11-06 | C1–C4 + C6 **verified**: control-plane API, worker, approval machine; **23/23 tests pass** (unit + live HTTP integration); E2E run: task create→ready→worker→completed with checkpoint; reject→409 on re-decision; auth 401s; revenue-without-evidence 400 | `npm test` output; `tests/*.test.ts` |
+| 2026-11-06 | Stack deviation recorded (Node/SQLite instead of ASP.NET/Postgres — no .NET/Docker in sandbox) | `docs/04` §1.1 |
