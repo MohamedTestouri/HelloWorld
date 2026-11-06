@@ -21,8 +21,8 @@
 | A2. Pick ONE niche (data-driven from A1) | **Completed** | dental primary, home-services fallback (`docs/08` §3); **owner confirmed D3 2026-11-06** | A1 |
 | A3. Draft productized offer + pricing | **Completed (draft)** | `docs/offers/dental-answering-engine.md` — prices marked [H], not published | A2 |
 | A4. Landing page — **draft done**, deployment awaiting approval | Draft ready | `landing/index.html` (local only) | A3 |
-| A5. 3 demo artifacts (synthetic data) | Planned | Screenshots/docs in repo | A3 |
-| A6. Outreach list (100 leads, verified sources) | **In progress — 11/100** | Starter batch sourced from practice websites (public business emails); CSV in `data/outreach/` (git-ignored), sha256 in control plane | A2 |
+| A5. 3 demo artifacts (synthetic data) | **Completed** | transcript + weekly report (`docs/offers/demo/artifacts.md`), 48h checklist; demo audio = next | A3 |
+| A6. Outreach list (100 leads, verified sources) | **Completed — 117/100** | 41 cities, 114 public emails + 3 contact-form-only, 2 spot-verified live; CSV git-ignored, sha256 `ace88a13…` in control plane | A2 |
 | A7. Outreach copy | Awaiting approval | Owner signs off | A3, A6 |
 | A8. Campaign #1 execution | Awaiting approval | ≥100 sends, tracked | A7 |
 | A9. Day-30 gate review | Planned | ≥5 positive replies OR ≥1 paid pilot; else re-niche | A8 |
