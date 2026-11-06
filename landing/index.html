@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dental Answering Engine — never miss another patient call</title>
+<meta name="description" content="AI phone reception for dental practices. Answers after-hours and overflow calls, books appointments, hands off to a human in one tap. Month-to-month.">
+<!-- DRAFT v1 — not deployed. Public deployment requires owner approval (docs/06/07). -->
+<style>
+  :root { --bg:#0A0F1C; --cyan:#00FFFF; --blue:#0080FF; --danger:#FF0000; --success:#00FF00; --text:#E6F7FF; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body {
+    background-color:var(--bg);
+    background-image:linear-gradient(rgba(0,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,255,.035) 1px,transparent 1px);
+    background-size:40px 40px;
+    color:var(--text); font-family:ui-monospace,'Cascadia Code',Menlo,monospace; line-height:1.6;
+  }
+  .wrap { max-width:880px; margin:0 auto; padding:48px 20px; }
+  .panel { background:rgba(10,20,35,.82); border:1px solid rgba(0,255,255,.35); box-shadow:0 0 18px rgba(0,255,255,.08); padding:28px; margin-bottom:20px; }
+  .label { color:var(--cyan); letter-spacing:.14em; text-transform:uppercase; font-size:.78rem; }
+  h1 { font-size:2rem; line-height:1.25; margin:10px 0 16px; font-weight:600; }
+  h2 { font-size:1.15rem; color:var(--cyan); margin-bottom:12px; }
+  .stat { color:var(--cyan); font-size:2.4rem; font-variant-numeric:tabular-nums; font-weight:700; }
+  .btn { display:inline-block; border:1px solid var(--cyan); color:var(--cyan); background:transparent; padding:12px 26px; font:inherit; letter-spacing:.08em; cursor:pointer; transition:.2s ease; text-decoration:none; }
+  .btn:hover { background:rgba(0,255,255,.1); box-shadow:0 0 14px rgba(0,255,255,.25); }
+  .btn:focus-visible { outline:2px solid var(--cyan); outline-offset:3px; }
+  ul { list-style:none; } li { padding:6px 0 6px 22px; position:relative; }
+  li::before { content:"▸"; color:var(--success); position:absolute; left:0; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
+  .muted { color:#8FB6C9; font-size:.9rem; }
+  footer { text-align:center; padding:24px; color:#5D7E93; font-size:.8rem; }
+  .status-dot { display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--success); box-shadow:0 0 10px var(--success); margin-right:8px; }
+  @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <section class="panel">
+    <span class="label">// dental answering engine</span>
+    <h1>Your practice misses 1 in 3 calls.<br>We answer every single one.</h1>
+    <p class="muted">AI phone reception built for dental practices: after-hours + overflow calling, appointment booking into your existing calendar, and a one-tap path to a human — always.</p>
+    <p style="margin-top:22px"><a class="btn" href="#contact">Book a 15-min demo →</a></p>
+  </section>
+
+  <section class="grid">
+    <div class="panel" style="text-align:center">
+      <div class="stat">1 in 3</div>
+      <p class="muted">calls to dental practices go unanswered*</p>
+    </div>
+    <div class="panel" style="text-align:center">
+      <div class="stat">48h</div>
+      <p class="muted">from signup to live on your number</p>
+    </div>
+    <div class="panel" style="text-align:center">
+      <div class="stat">$0</div>
+      <p class="muted">setup for our first 25 practices</p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>// what it does</h2>
+    <ul>
+      <li>Answers every after-hours and overflow call in your practice's style</li>
+      <li>Books appointments straight into your existing scheduling calendar</li>
+      <li>Handles FAQs: hours, location, services — configured by you</li>
+      <li>Every caller can reach a real person in one tap — no phone trees, no loops</li>
+      <li>Captures every lead (name, number, reason) → SMS + email to you instantly</li>
+      <li>Weekly report: calls answered, appointments booked, callbacks owed</li>
+    </ul>
+  </section>
+
+  <section class="panel">
+    <h2>// what it never does</h2>
+    <ul>
+      <li>Give clinical or dental advice — ever</li>
+      <li>Store health information</li>
+      <li>Put callers in a loop — unresolved after 2 turns? A human calls back</li>
+      <li>Lock you into a contract — month-to-month, cancel anytime</li>
+    </ul>
+  </section>
+
+  <section class="panel" id="contact">
+    <h2>// get early access</h2>
+    <p class="muted">First 25 practices: free setup while we build case studies. Flat monthly pricing, live in 48 hours.</p>
+    <p style="margin-top:16px"><a class="btn" href="mailto:hello@example.com?subject=Demo%20request">Email us to book a demo →</a></p>
+    <p class="muted" style="margin-top:10px">[CONTACT ADDRESS PLACEHOLDER — owner supplies before deployment]</p>
+  </section>
+
+  <footer>
+    <span class="status-dot"></span>draft v1 — not published · *source: industry reporting, see docs/08 · © 2026 [legal entity]
+  </footer>
+
+</main>
+</body>
+</html>

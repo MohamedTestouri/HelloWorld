@@ -19,8 +19,8 @@
 |---|---|---|---|
 | A1. Mine 50+ competitor reviews/complaints in 2 candidate niches | **Completed** | ≥20 datapoints → 8 themes, 3 niches (`docs/08`) | — |
 | A2. Pick ONE niche (data-driven from A1) | **Completed** | dental primary, home-services fallback (`docs/08` §3) | A1 |
-| A3. Draft productized offer + pricing | Planned | Offer one-pager | A2 |
-| A4. Landing page (free subdomain) live | Planned | Working URL | A3 |
+| A3. Draft productized offer + pricing | **Completed (draft)** | `docs/offers/dental-answering-engine.md` — prices marked [H], not published | A2 |
+| A4. Landing page — **draft done**, deployment awaiting approval | Draft ready | `landing/index.html` (local only) | A3 |
 | A5. 3 demo artifacts (synthetic data) | Planned | Screenshots/docs in repo | A3 |
 | A6. Outreach list (100 leads, verified sources) | Planned | CSV in secure location, **not** in Git | A2 |
 | A7. Outreach copy | Awaiting approval | Owner signs off | A3, A6 |
@@ -35,7 +35,7 @@
 | B2. Registration package (forms, steps, checklist) prepared | Ready | Complete checklist in repo | B1 |
 | B3. Payoneer account | **Awaiting owner (KYC)** | Account active | Owner |
 | B4. Accountant shortlist (3 Tunisian advisers, fee quotes) | Ready | Shortlist doc | — |
-| B5. Invoice + service agreement templates | Ready | Templates in repo | — |
+| B5. Invoice + service agreement templates | **Completed (draft)** | `docs/offers/agreement-invoice-templates.md` — counsel review flagged before first use | — |
 
 ## Epic C — Control plane (Phase 2 MVP)
 
@@ -69,3 +69,5 @@ Every session, in order: (1) verify no unauthorized spend, (2) advance highest-p
 | 2026-11-06 | A1/A2 complete: ≥20 complaint datapoints mined across voice-AI/dental/legal niches; niche selected = **dental** (home-services fallback) | `docs/08-niche-selection.md` |
 | 2026-11-06 | C1–C4 + C6 **verified**: control-plane API, worker, approval machine; **23/23 tests pass** (unit + live HTTP integration); E2E run: task create→ready→worker→completed with checkpoint; reject→409 on re-decision; auth 401s; revenue-without-evidence 400 | `npm test` output; `tests/*.test.ts` |
 | 2026-11-06 | Stack deviation recorded (Node/SQLite instead of ASP.NET/Postgres — no .NET/Docker in sandbox) | `docs/04` §1.1 |
+| 2026-11-06 | A3 offer draft, A4 landing draft, A6 methodology, A7 copy draft, B5 agreement+invoice templates | `docs/offers/*`, `landing/index.html` |
+| 2026-11-06 | Control plane seeded with 4 real tasks + **2 pending owner approvals** (outreach_send, registration) | live API `:8787/health` → 4 tasks, 2 pending |
